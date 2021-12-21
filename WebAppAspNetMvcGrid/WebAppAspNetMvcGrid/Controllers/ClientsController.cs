@@ -238,6 +238,7 @@ namespace WebAppAspNetMvcGrid.Controllers
 
 
         [HttpGet]
+        [Authorize(Roles = "Administrator")]
         public ActionResult Detail(int id)
         {
             var db = new GosuslugiContext();
@@ -250,6 +251,7 @@ namespace WebAppAspNetMvcGrid.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Administrator")]
         public ActionResult Pdf(int id)
         {
             var db = new GosuslugiContext();
