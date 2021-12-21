@@ -31,12 +31,10 @@
         columns.Add(model => model.Name).Titled("Имя");
         columns.Add(model => model.Surname).Titled("Фамилия");
         columns.Add(model => model.Age).Titled("Возраст");
-        columns.Add(model => model.Birthday).Titled("Дата рождения");
+        columns.Add(model => model.Birthday.Value.ToString("dd.MM.yyyy")).Titled("Дата рождения");
         columns.Add(model => model.Gender).Titled("Пол");
-        columns.Add(model => string.Join(", ", model.ClientTypes.Select(x => $"{x.Name}"))).Titled("Типы клиентов");
-        columns.Add(model => string.Join(", ", model.Citizenships.Select(x => $"{x.Name}"))).Titled("Гражданства");
         columns.Add(model => string.Join(", ", model.Orders.Select(x => $"{x.Procedure}"))).Titled("Услуги");
-        columns.Add(model => string.Join(", ", model.AvailableDocuments.Select(x => $"{x.Name}"))).Titled("Гражданства");
+
 
         if (User.IsInRole("Administrator"))
         {

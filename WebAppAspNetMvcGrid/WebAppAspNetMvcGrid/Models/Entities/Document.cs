@@ -25,13 +25,13 @@ namespace WebAppAspNetMvcGrid.Models
         /// <summary>
         /// Дата изменения
         /// </summary>
-        [Required]
+        
         public DateTime? DateChanged { get; set; }
 
         /// <summary>
         /// Имя файла
         /// </summary>
-        [Required]
+        
         
         public string FileName { get; set; }
 

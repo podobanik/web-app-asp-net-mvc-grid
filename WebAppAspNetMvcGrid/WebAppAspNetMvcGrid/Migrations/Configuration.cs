@@ -1,4 +1,4 @@
-namespace WebAppAspNetMvcGrid.Migrations
+namespace WebAppAspNetMvcIdentity.Migrations
 {
     using System;
     using System.Data.Entity;
@@ -10,7 +10,6 @@ namespace WebAppAspNetMvcGrid.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "WebAppAspNetMvcGrid.Models.GosuslugiContext";
         }
 
         protected override void Seed(WebAppAspNetMvcGrid.Models.GosuslugiContext context)
