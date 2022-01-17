@@ -8,8 +8,9 @@
 {
     <h3>Настройки</h3>
 
-    <button class="btn btn-dark text-white" data-bs-toggle="modal" data-bs-target="#modal-@controllerName" onclick="GetCreate('@controllerName','create')">Добавить запись</button>
-
+    <button class="btn btn-dark text-white" data-bs-toggle="modal" data-bs-target="#modal-@controllerName" onclick="GetCreate('@controllerName','create')">Добавить настройку</button>
+    <br />
+    <br />
     <table class="table table-hover table-bordered" style="text-align:center">
         <thead>
             <tr class="bg-black text-white">
@@ -82,33 +83,33 @@
         </tbody>
     </table>
 
-    }
+}
 
-    <div class="modal fade" id="modal-@controllerName" data-bs-backdrop="static" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <a href="/@controllerName/Index" class="btn-close"></a>
-                </div>
-                <div class="modal-body" id="modal-body-@controllerName">
-                    @if (ViewBag.Create != null)
-                    {
-                        @Scripts.Render("~/bundles/bootstrap")
-                        @Html.Partial("Create", (Setting)ViewBag.Create)
-                        <script>
+<div class="modal fade" id="modal-@controllerName" data-bs-backdrop="static" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a href="/@controllerName/Index" class="btn-close"></a>
+            </div>
+            <div class="modal-body" id="modal-body-@controllerName">
+                @if (ViewBag.Create != null)
+                {
+                    @Scripts.Render("~/bundles/bootstrap")
+                    @Html.Partial("Create", (Setting)ViewBag.Create)
+                    <script>
                         new bootstrap.Modal(document.getElementById('modal-@controllerName')).show();
-                        </script>
-                    }
+                    </script>
+                }
 
-                    @if (ViewBag.Edit != null)
-                    {
-                        @Scripts.Render("~/bundles/bootstrap")
-                        @Html.Partial("Edit", (Setting)ViewBag.Edit)
-                        <script>
+                @if (ViewBag.Edit != null)
+                {
+                    @Scripts.Render("~/bundles/bootstrap")
+                    @Html.Partial("Edit", (Setting)ViewBag.Edit)
+                    <script>
                         new bootstrap.Modal(document.getElementById('modal-@controllerName')).show();
-                        </script>
-                    }
-                </div>
+                    </script>
+                }
             </div>
         </div>
     </div>
+</div>

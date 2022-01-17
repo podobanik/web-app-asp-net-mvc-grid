@@ -20,16 +20,20 @@
     font-size: 1rem;
 }
 
+
 .mvc-grid table {
     border-collapse: collapse;
     max-width: 100%;
-    width: 100%;
+    width:100%;
+    
 }
 
 .mvc-grid th {
     background-clip: padding-box;
     background-color: lightskyblue;
     position: relative;
+    text-align:center;
+    
 }
 
 .mvc-grid th,
